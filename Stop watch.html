@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="stop watch.css" />
+  </head>
+  <body>
+    <div class="headring">
+      <h2>STOP WATCH</h2>
+   </div>
+<div class="watch">
+  <div class="time">
+  <p><span id="Minute">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p> 
+  </div>
+  <footer>
+  <div class="controls">
+   <button id="Start">Start</button>
+   <button id="Restart">Reset</button>
+   <button id="Stop"> Stop</button>
+  </div>
+
+</div>
+
+    </div>
+    </footer>
+  </body>
+ <script>
+window.onload=function(){
+  let Minute=0;
+  let seconds=0;
+  let tens=00;
+  let appendMinute=document.querySelector('#Minute');
+  let appendseconds=document.querySelector('#seconds');
+  let appendtens=document.querySelector('#tens');
+  let Startbtn=document.querySelector('#Start');
+  let Restartbtn=document.querySelector('#Restart');
+  let Stopbtn=document.querySelector('#Stop')
+  let Interval;
+  const startTimer=()=>{
+     tens++
+    if(tens<=9){
+     
+      appendtens.innerHTML ='0' + tens
+    }
+    if(tens>9){
+      appendtens.innerHTML=tens
+    }
+    if(tens > 99){
+      seconds++
+      appendseconds.innerHTML='0' + seconds;
+      tens=0;
+      appendtens.innerHTML = '0' +0
+    }
+    if(seconds >9){
+      appendseconds.innerHTML=seconds
+    }
+    if(seconds> 59){
+      Minute++
+      appendMinute.innerHTML='0' + Minute
+      seconds=0;
+      appendseconds.innerHTML='0' +0
+    }
+  }
+  Startbtn.onclick=()=>{
+    clearInterval(Interval)
+    Interval=setInterval(startTimer, 10)
+  }
+Stopbtn.onclick=()=>{
+    clearInterval(Interval)
+}
+Restartbtn.onclick=()=>{
+    clearInterval(Interval)
+    tens='00';
+    seconds='00';
+    Minute='00';
+    appendtens.innerHTML=tens;
+    appendseconds.innerHTML=seconds;
+    appendMinute.innerHTML=Minute;
+}
+}
+ </script>
+ <div class="under">
+<p>&#169; Dev_Thosyn All Rights Reserved.</p></div>
+</html>

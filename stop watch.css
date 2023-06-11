@@ -1,0 +1,124 @@
+:root{
+--primary:crimson;
+--dark:#1f2937;
+--last:white;
+--darkdark:#111827;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--dark);
+  color: var(white);
+}
+.headring{
+  text-align: CENTER;
+  color: WHITE;
+  font-weight: lighter;
+  position: relative;
+  top: 70px;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.watch{
+  margin: 140px;
+  text-align: center;
+  justify-content: center;
+  margin: 9rem auto;
+  animation: 1 e;
+  padding: 20px;
+  cursor: pointer;
+  border-radius:15px 35px 25px;
+  animation: showcontent 2.5s ease-in-out 0.651;
+  width: 100%;
+  box-shadow: 0 30px 30px 30px crimson;
+  max-width: 360px;
+  -webkit-box-reflect: below 95px linear-gradient(transparent, rgba(225,225, 225 ,0.1));
+  background-color: var(--darkdark);
+}
+@media (max-width:900px){
+  
+  .watch{
+   
+    width: 900px;
+  }
+ .under p{
+  position: relative;
+  top: 130px;
+ }
+}
+@keyframes showcontent{
+  from{
+    transform: translate(-130%);
+    opacity: 1;
+    filter: blur(0);
+   
+  }
+     to {
+       transform: translate(100%);
+       opacity: 0;
+       filter: blur(10);
+     }
+}
+
+.time{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: white;
+ font-weight: bolder;
+
+}
+.time :nth-child(2){
+ color: var(--primary);
+  padding: 2px;
+ 
+  border-radius:15px 15px 15px;
+}
+.controls{
+  margin-top: 15px;
+  border-bottom: solid white 3px;
+  padding: 15px;
+}
+.controls button{
+  padding: 15px;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+ 
+  font-weight: 400px;
+  cursor: pointer;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--primary);
+}
+.controls button:hover{
+  background-color: white;
+  transition: 3s;
+  color: black;
+  border:  solid 5px black;
+  padding-right: 20px;
+}
+.controls button:active{
+  transform: scale(0.96);
+
+}
+.controls button:active {
+  transform: scale(0.96);
+
+}
+.under{
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: border;
+  
+}
+@media (max-width){
+  .under p{
+    text-align: ;
+  }
+}
